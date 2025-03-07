@@ -2,7 +2,7 @@ import React from 'react'
 
 function Delete() {
   return (
-    <div>DeletePage</div>
+    <div>Delete</div>
   )
 }
 

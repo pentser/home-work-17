@@ -1,0 +1,49 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "name": "Iron Man",
+            "description": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+            "rating": 5,
+            "image": "https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg"          
+        },
+        {
+            "id": 2,
+            "name": "The Incredible Hulk",
+            "description": "Scientist Bruce Banner scours the planet for an antidote to the unbridled force of rage within him: the Hulk",
+            "rating": 4,
+            "image": "https://image.tmdb.org/t/p/w500/gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg"          
+        },
+        {
+            "id": 3,
+            "name": "To Rome with Love",
+            "description": "Four tales unfold in the Eternal City: While vacationing in Rome, architect John encounters a young man whose romantic woes remind him of a painful incident from his own youth;",
+            "rating": 4,
+            "image": "https://image.tmdb.org/t/p/w500/l6kiBvruMr5qPsTyv853jIlj2pv.jpg"          
+        },
+        {
+            "id": 4,
+            "name": "Safety Not Guaranteed",
+            "description": "Three magazine employees head out on an assignment to interview a guy who placed a classified ad seeking a companion for time travel.",
+            "rating": 3,
+            "image": "https://via.placeholder.com/150"          
+        },
+        {
+            "id": 5,
+            "name": "Captain America: Civil War",
+            "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a ",
+            "rating": 2,
+            "image": "https://image.tmdb.org/t/p/w500/hOVZHM2ZEaWdytcptRhfzk0fJBv.jpg"          
+        },
+        {
+            "id": 6,
+            "name": "Madagascar 3: Europe's Most Wanted",
+            "description": "Animal pals Alex, Marty, Melman, and Gloria are still trying to make it back to New York's Central Park Zoo.",
+            "rating": 1,
+            "image": "https://image.tmdb.org/t/p/w500/hfdds27YL5nTAhiOtjfNNxD3bJe.jpg"          
+        }
+        
+      
+    ]
+}
+
