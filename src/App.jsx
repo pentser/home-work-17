@@ -8,24 +8,24 @@ import Search from './pages/Search'
 
 import {Route,Routes} from "react-router-dom"
 import Navbar from './components/Navbar'
-import MoviesContext from './contexts/MoviesContext'
+import MoviesContextProvider from './contexts/MoviesContextProvider'
 
 function App() {
 
 
   return (
-    <MoviesContext>
+    <MoviesContextProvider>
       <header>
         <h1>Best Movies</h1>
         <Navbar />  
       </header>
        <Routes>
-        <Route path="/" component={Home} />
-        <Route path="/add" component={Add} />
-        <Route path="/delete" component={Delete} />
-        <Route path="/search" component={Search} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/add" element={<Add/>} />
+        <Route path="/delete" element={<Delete/>} />
+        <Route path="/search" element={<Search/>} />
        </Routes> 
-    </MoviesContext>
+    </MoviesContextProvider>
   )
 }
 
