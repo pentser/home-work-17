@@ -87,7 +87,7 @@ const value= {
 
   
   return (
-   <MoviesContext.Provider value={{movies,setMovies, alterMovies}}>
+   <MoviesContext.Provider value={value}>
      {children}
     </MoviesContext.Provider>
   )

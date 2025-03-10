@@ -7,17 +7,29 @@ import Movie from "../components/Movie";
 
 function Movies(props) {
 
-    const {movies,limit} = props;
+    const {limit} = props;
 
-   // const {movies,setMovies,alterMovies} = useContext(MoviesContext)
+   
+    const {movies} = useContext(MoviesContext)
+    console.log(movies)
+
   return (
     <>
-    <div>
-        {movies.forEach((movie,inx)=>{
-            inx<limit && <Movie key={inx} movie={movie}/>
+    <div className='flex gap-5'>
+    
+        {movies.map((movie,inx)=>{
+             if(inx<limit) {
+              return (
+                <div className='flex flex-col'>
+                    <Movie key={inx} movie={movie}/>
+                </div>        
+              )
+            
+             }
+             return null;    
+
         })}
     </div>
-
   </>
   )
 }
