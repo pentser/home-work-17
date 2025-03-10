@@ -1,17 +1,19 @@
 
 import { useContext } from "react"
 import {MoviesContext} from "../contexts/MoviesContextProvider"
-import {AppContext} from "../contexts/AppProvider"
+import Movies from "../components/Movies";
 
  
  function Home() {
-     const {movies,setMovies,alterMovies} = useContext(MoviesContext)
+     const {sortMoviesByRating} = useContext(MoviesContext)
      
+     {sortMoviesByRating()}
+     let numberOfMovies=5;
       return (
-         
-          <div>
-              The context value is: {JSON.stringify(movies)}
-          </div>
+        <>
+          <Movies movies={movies} limit={numberOfMovies}></Movies>
+        </>
+          
       );
 
     }

@@ -67,10 +67,22 @@ function MoviesContextProvider({children}) {
     }
 }
 
+function sortMoviesByRating() {
+  const sortedMovies = [...movies].sort((a, b) => b.rating - a.rating);
+  setMovies(sortedMovies);
+}
+
+function getRandomMovies(numberOfMovies) {
+  const shuffledMovies = [...movies].sort(() => 0.5 - Math.random());
+  return shuffledMovies.slice(0, numberOfMovies);
+}
+
 const value= {
   movies,
   setMovies,
-  alterMovies
+  alterMovies,
+  sortMoviesByRating,
+  getRandomMovies
 }
 
   
