@@ -10,7 +10,7 @@ function Movie(props) {
      <h3 className='text-[1em] text-blue-500'>{name}</h3>
      <p className='text-info'>{desc}</p>
      <span>rating: {rating}</span>
-     <Rate></Rate>
+     <Rate rate={rating}></Rate>
 
    </>
   )

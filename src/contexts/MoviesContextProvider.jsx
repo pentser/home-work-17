@@ -19,10 +19,10 @@ const initial_movies= [
   },
   {
       "id": 3,
-      "name": "To Rome with Love",
+      "name": "Justice League",
       "description": "Four tales unfold in the Eternal City: While vacationing in Rome, architect John encounters a young man whose romantic woes remind him of a painful incident from his own youth;",
       "rating": 4,
-      "image": "https://image.tmdb.org/t/p/w500/l6kiBvruMr5qPsTyv853jIlj2pv.jpg"          
+      "image": "https://image.tmdb.org/t/p/w500/eifGNCSDuxJeS1loAXil5bIGgvC.jpg"          
   },
   {
       "id": 4,
@@ -33,30 +33,30 @@ const initial_movies= [
   },
   {
       "id": 5,
-      "name": "Captain America: Civil War",
+      "name": "Green Lantern",
       "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a ",
       "rating": 2,
-      "image": "https://image.tmdb.org/t/p/w500/hOVZHM2ZEaWdytcptRhfzk0fJBv.jpg"          
+      "image": "https://image.tmdb.org/t/p/w500/fj21HwUprqjjwTdkKC1XZurRSpV.jpg"          
   },
   {
       "id": 6,
-      "name": "Madagascar 3: Europe's Most Wanted",
-      "description": "Animal pals Alex, Marty, Melman, and Gloria are still trying to make it back to New York's Central Park Zoo.",
+      "name": "The Dark Knight",
+      "description": "Batman raises the stakes in his war on crime. With the help of Lt",
       "rating": 1,
-      "image": "https://image.tmdb.org/t/p/w500/hfdds27YL5nTAhiOtjfNNxD3bJe.jpg"          
+      "image": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"          
   }
   
 
 ]
 
-export const MoviesContext = createContext({ movies: initial_movies, setMovies: () => {} ,alterMovies: (movie)=>{}});
+export const MoviesContext = createContext({ movies: initial_movies, setMovies: () => {} ,alterMovies: (movie)=>{},sortMoviesByRating: ()=>{},getRandomMovies:(numberOfMovies)=>{}});
 
 
 function MoviesContextProvider({children}) {
 
   const [movies, setMovies] = useState(initial_movies);
 
-    function alterMovies(movie) {
+     function alterMovies(movie) {
         const index = movies.findIndex((m) => m.name === movie.name);
         if (index === -1) {
           setMovies([...movies, movie]);

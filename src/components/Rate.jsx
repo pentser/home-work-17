@@ -1,25 +1,21 @@
-import React from 'react'
-import { useState } from 'react';
-const Star = ({ selected = false, onClick }) => (
-  <span onClick={onClick} style={{ cursor: 'pointer' }}>
-    {selected ? '★' : '☆'}
-  </span>
-);
 
-function Rate() {
-  const [rating, setRating] = useState(0);
+import React from 'react';
+
+const Rate = ({ rate }) => {
+  const validRate = typeof rate === 'number' && !isNaN(rate) ? rate : 0;
+  const fullStars = Math.min(Math.max(validRate, 1), 5); // Ensure rate is between 1 and 5
+  const emptyStars = 5 - fullStars;
 
   return (
     <div>
-      {[1, 2, 3, 4, 5].map((star) => (
-        <Star
-          key={star}
-          selected={star <= rating}
-          onClick={() => setRating(star)}
-        />
+      {[...Array(fullStars)].map((_, index) => (
+        <span key={index}>★</span>
+      ))}
+      {[...Array(emptyStars)].map((_, index) => (
+        <span key={index}>☆</span>
       ))}
     </div>
   );
-}
+};
 
-export default Rate
+export default Rate;
